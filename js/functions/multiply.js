@@ -4,9 +4,9 @@
  * Returns an number.
  */
 function multiply(array) {
-    let product = 1;
+    let product = array[0];
 
-    for (var i = 0; i < array.length; i++) {
+    for (var i = 1; i < array.length; i++) {
         product = product * array[i];
     }
 

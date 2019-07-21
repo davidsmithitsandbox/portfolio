@@ -3,12 +3,12 @@
  * 
  * Returns an number.
  */
-function add(array) {
-    let sum = array[0];
-    
+function subtract(array) {
+    let remainder = array[0];
+
     for (var i = 1; i < array.length; i++) {
-        sum = sum + array[i];
+        remainder = remainder - array[i];
     }
 
-    return sum;
+    return remainder;
 }
