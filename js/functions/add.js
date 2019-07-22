@@ -4,11 +4,11 @@
  * Returns an number.
  */
 function add(array) {
-    let sum = array[0];
+    let sum = 0;
     
-    for (var i = 1; i < array.length; i++) {
-        sum = sum + array[i];
-    }
+    array.forEach(element => {
+        sum = sum + element;
+    });
 
     return sum;
 }

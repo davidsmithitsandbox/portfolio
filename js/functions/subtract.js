@@ -1,5 +1,5 @@
 /**
- * Takes an array of numbers and adds them.
+ * Takes an array of numbers and subtracts them in order.
  * 
  * Returns an number.
  */

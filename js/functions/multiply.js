@@ -4,11 +4,11 @@
  * Returns an number.
  */
 function multiply(array) {
-    let product = array[0];
+    let product = 1;
 
-    for (var i = 1; i < array.length; i++) {
-        product = product * array[i];
-    }
+    array.forEach(element => {
+        product = product * element;
+    });
 
     return product;
 }
