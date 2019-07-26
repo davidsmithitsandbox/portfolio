@@ -1,16 +1,20 @@
 <?php
 
 /*****************************************
+ * ABSTRACT FACTORY PATTERN
+ ****************************************/
+
+/*****************************************
  * FACTORIES
  ****************************************/
-abstract class Factory
+abstract class ThemeFactory
 {
-    abstract public function createScrollbar();
-    abstract public function createWindowDecorations();
+    abstract protected function createScrollbar();
+    abstract protected function createWindowDecorations();
 }
 
 // FACTORIES
-class LightTheme extends Factory
+class Light extends ThemeFactory
 {
     public function createScrollbar()
     {
@@ -23,7 +27,7 @@ class LightTheme extends Factory
     
 }
 
-class DarkTheme extends Factory
+class Dark extends ThemeFactory
 {
     public function createScrollbar()
     {
@@ -88,17 +92,17 @@ class DarkThemeWindowDecorations extends WindowDecorations
  * CLIENT
  ****************************************/
 
-class Client
+class Theme
 {
     public $scroll_bar          = '';
     public $window_decorations  = '';
 
-    public function __construct(Factory $Factory)
+    public function __construct(ThemeFactory $ThemeFactory)
     {
-        $this->scroll_bar = $Factory->createScrollbar();
-        $this->scroll_bar = $Factory->createWindowDecorations();
+        $this->scroll_bar = $ThemeFactory->createScrollbar();
+        $this->scroll_bar = $ThemeFactory->createWindowDecorations();
     }
 }
 
-$LightTheme = new Client(new LightTheme);
-$DarkTheme  = new Client(new DarkTheme);
+$Light = new Theme(new Light);
+$Dark  = new Theme(new Dark);

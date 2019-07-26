@@ -1,12 +1,16 @@
 <?php
 
 /*****************************************
+ * ABSTRACT FACTORY PATTERN
+ ****************************************/
+
+/*****************************************
  * FACTORIES
  ****************************************/
 abstract class AbstractFactory
 {
-    abstract public function createProductA();
-    abstract public function createProductB();
+    abstract protected function createProductA();
+    abstract protected function createProductB();
 }
 
 // CONCRETE FACTORIES
@@ -101,4 +105,4 @@ class Client
 }
 
 $ConcreteFactory1 = new Client(new ConcreteFactory1);
-$ConcreteFactory2  = new Client(new ConcreteFactory2);
+$ConcreteFactory2 = new Client(new ConcreteFactory2);
