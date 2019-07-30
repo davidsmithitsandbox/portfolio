@@ -9,8 +9,8 @@
  ****************************************/
 abstract class AbstractFactory
 {
-    abstract protected function createProductA();
-    abstract protected function createProductB();
+    abstract public function createProductA();
+    abstract public function createProductB();
 }
 
 // CONCRETE FACTORIES

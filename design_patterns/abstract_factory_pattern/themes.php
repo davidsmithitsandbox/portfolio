@@ -1,16 +1,14 @@
 <?php
 
-/*****************************************
- * ABSTRACT FACTORY PATTERN
- ****************************************/
+// ABSTRACT FACTORY PATTERN
 
 /*****************************************
  * FACTORIES
  ****************************************/
 abstract class ThemeFactory
 {
-    abstract protected function createScrollbar();
-    abstract protected function createWindowDecorations();
+    abstract public function createScrollbar();
+    abstract public function createWindowDecorations();
 }
 
 // FACTORIES
